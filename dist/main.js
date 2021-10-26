@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log('Функция "One"'),console.log('Функция "Two"')})();
