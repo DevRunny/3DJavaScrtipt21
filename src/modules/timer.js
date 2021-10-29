@@ -19,7 +19,6 @@ const timer = (deadline) => {
     timerHours.textContent = ("0" + getTime.hours).slice(-2);
     timerMinutes.textContent = ("0" + getTime.minutes).slice(-2);
     timerSeconds.textContent = ("0" + getTime.seconds).slice(-2);
-    console.log("lol");
   };
   setInterval(() => {
     let getTime = getTimeRemaining();
