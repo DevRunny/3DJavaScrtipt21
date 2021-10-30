@@ -6,16 +6,14 @@ const modal = () => {
 
   const openModal = () => {
     modal.style.display = "block";
-    modal.animate(
+    document.querySelector(".popup-content").animate(
       [
         {
           opacity: 0,
-          transform: "translate3D(0, -100px, 0)",
-          backgroundColor: "white",
+          transform: "translate3D(0, -300px, 0)",
         },
         {
           opacity: 1,
-          transform: "translate3D(0, 0, 0)",
         },
       ],
       {
