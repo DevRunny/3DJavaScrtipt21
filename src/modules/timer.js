@@ -20,6 +20,9 @@ const timer = (deadline) => {
     timerMinutes.textContent = ("0" + getTime.minutes).slice(-2);
     timerSeconds.textContent = ("0" + getTime.seconds).slice(-2);
   };
+  if (getTimeRemaining > 0) {
+    updateClock();
+  }
   setInterval(() => {
     let getTime = getTimeRemaining();
     if (getTime.timeRemaining > 0) {
