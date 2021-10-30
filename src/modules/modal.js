@@ -9,10 +9,12 @@ const modal = () => {
     modal.animate(
       [
         {
+          opacity: 0,
           transform: "translate3D(0, -100px, 0)",
           backgroundColor: "white",
         },
         {
+          opacity: 1,
           transform: "translate3D(0, 0, 0)",
         },
       ],
