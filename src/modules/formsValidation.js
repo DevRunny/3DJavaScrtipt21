@@ -23,10 +23,7 @@ const formsValidation = () => {
     yourEmail.addEventListener("input", (e) => {
       e.preventDefault();
 
-      yourEmail.value = yourEmail.value.replace(
-        /[а-яА-Я)(&^%$#=+/\\"№;:?,\{\}\[\]|`]/,
-        ""
-      );
+      yourEmail.value = yourEmail.value.replace(/[^a-z\-\@\_\.\!\~\*\']/gi, "");
     });
 
     yourPhone.addEventListener("input", (e) => {
