@@ -8,7 +8,7 @@ const menu = () => {
       e.target.closest("ul")
     ) {
       menu.classList.toggle("active-menu");
-    } else {
+    } else if (!e.target.closest(".active-menu")) {
       menu.classList.remove("active-menu");
     }
   });
