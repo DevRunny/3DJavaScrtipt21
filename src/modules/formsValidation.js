@@ -14,35 +14,26 @@ const formsValidation = () => {
     yourName.addEventListener("input", (e) => {
       e.preventDefault();
 
-      yourName.value = yourName.value.replace(
-        /[a-zA-Z0-9)(*&^%$#@!_=+/\\"№;:?.,\{\}\[\]|~`']/,
-        ""
-      );
+      e.target.value = e.target.value.replace(/[^а-я -]/gi, "");
     });
 
     yourEmail.addEventListener("input", (e) => {
       e.preventDefault();
 
-      yourEmail.value = yourEmail.value.replace(/[^a-z\-\@\_\.\!\~\*\']/gi, "");
+      e.target.value = e.target.value.replace(/[^a-z0-9_.~*'!@-]/giu, "");
     });
 
     yourPhone.addEventListener("input", (e) => {
       e.preventDefault();
 
-      yourPhone.value = yourPhone.value.replace(
-        /[а-яА-Яa-zA-Z*&^%$#@!_=/\\"№;:?.,\{\}\[\]|~`']/,
-        ""
-      );
+      e.target.value = e.target.value.replace(/[^0-9\(\)\-\+\ ]/g, "");
     });
   });
 
   yourMessage.addEventListener("input", (e) => {
     e.preventDefault();
 
-    yourMessage.value = yourMessage.value.replace(
-      /[a-zA-Z0-9)(*&^%$#@_=+/\\"№;:\{\}\[\]|~`']/,
-      ""
-    );
+    e.target.value = e.target.value.replace(/[^а-я !?()-*%.,/]/gi, "");
   });
 
   calcBlock.addEventListener("input", (e) => {
