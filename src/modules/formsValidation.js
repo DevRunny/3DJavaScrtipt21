@@ -19,6 +19,7 @@ const formsValidation = () => {
 
     yourEmail.addEventListener("input", (e) => {
       e.preventDefault();
+      yourEmail.type = "text";
 
       e.target.value = e.target.value.replace(/[^a-z0-9_.~*'!@-]/giu, "");
     });
