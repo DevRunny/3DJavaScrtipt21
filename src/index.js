@@ -4,6 +4,7 @@ import modal from "./modules/modal";
 import formsValidation from "./modules/formsValidation";
 import tabs from "./modules/tabs";
 import slider from "./modules/slider";
+import calc from "./modules/calc";
 import sliderSwiper from "./modules/sliderSwiper";
 
 timer("30 november 2021");
@@ -12,4 +13,5 @@ modal();
 formsValidation();
 tabs();
 slider();
+calc(100);
 sliderSwiper();
