@@ -1,7 +1,7 @@
 import timer from "./modules/timer";
 import menu from "./modules/menu";
 import modal from "./modules/modal";
-// import formsValidation from "./modules/formsValidation";
+import formsValidation from "./modules/formsValidation";
 import tabs from "./modules/tabs";
 import slider from "./modules/slider";
 import sliderSwiper from "./modules/sliderSwiper";
@@ -11,7 +11,7 @@ import sendForm from "./modules/sendForm";
 timer("30 november 2021");
 menu();
 modal();
-// formsValidation();
+formsValidation();
 tabs();
 slider();
 sliderSwiper();

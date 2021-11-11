@@ -65,7 +65,9 @@ const sendForm = ({ formId, someElem = [] }) => {
           statusBlock.style.color = "red";
         });
     } else {
-      alert("Данные не валидны");
+      statusBlock.textContent = errorText;
+      statusBlock.style.color = "red";
+      alert("Пожалуйста, заполните все поля");
     }
   };
 
