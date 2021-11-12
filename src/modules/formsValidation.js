@@ -15,7 +15,7 @@ const formsValidation = () => {
       e.preventDefault();
 
       e.target.value = e.target.value.replace(/[^а-я ]/gi, "");
-      if (e.target.value) {
+      if (e.target.value.length >= 2) {
         e.target.classList.add("success");
       } else {
         e.target.classList.remove("success");
@@ -23,11 +23,13 @@ const formsValidation = () => {
     });
 
     yourEmail.addEventListener("input", (e) => {
+      const testEmail = /[\-\.\w]+@([\w]+\.)+[\w]+/gi;
       e.preventDefault();
       yourEmail.type = "text";
 
       e.target.value = e.target.value.replace(/[^a-z0-9_.~*'!@-]/giu, "");
-      if (e.target.value) {
+
+      if (testEmail.test(e.target.value)) {
         e.target.classList.add("success");
       } else {
         e.target.classList.remove("success");
@@ -38,7 +40,7 @@ const formsValidation = () => {
       e.preventDefault();
 
       e.target.value = e.target.value.replace(/[^0-9\+]/g, "");
-      if (e.target.value) {
+      if (e.target.value.length >= 11) {
         e.target.classList.add("success");
       } else {
         e.target.classList.remove("success");

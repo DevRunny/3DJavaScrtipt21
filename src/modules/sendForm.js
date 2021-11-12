@@ -55,6 +55,9 @@ const sendForm = ({ formId, someElem = [] }) => {
         .then(() => {
           statusBlock.textContent = successText;
           statusBlock.style.color = "white";
+          setTimeout(() => {
+            document.querySelector(".popup").style.display = "none";
+          }, 5000);
 
           formElements.forEach((input) => {
             input.value = "";
@@ -67,7 +70,9 @@ const sendForm = ({ formId, someElem = [] }) => {
     } else {
       statusBlock.textContent = errorText;
       statusBlock.style.color = "red";
-      alert("Пожалуйста, заполните все поля");
+      alert(
+        "Пожалуйста, заполните все поля и проверьте правильность введенных данных:)"
+      );
     }
   };
 
@@ -78,6 +83,17 @@ const sendForm = ({ formId, someElem = [] }) => {
 
     form.addEventListener("submit", (e) => {
       e.preventDefault();
+
+      if (statusBlock.style.display !== "none") {
+        setTimeout(() => {
+          statusBlock.style.display = "none";
+        }, 5000);
+      } else {
+        statusBlock.style.display = "block";
+        setTimeout(() => {
+          statusBlock.style.display = "none";
+        }, 5000);
+      }
 
       submitForm();
     });
